@@ -1,11 +1,11 @@
 import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#F2F2F2',
+    backgroundColor: '#F2F0F2',
   },
   //Input Box
   inputBoxContainer: {
-    backgroundColor: '#E9E6E8',
+    backgroundColor: '#E9E9E9',
     margin: 10,
     padding: 10,
     flexDirection: 'row',
@@ -41,12 +41,32 @@ const styles = StyleSheet.create({
   destinationText: {
     marginLeft: 10,
     fontSize: 16,
+    fontWeight: '500',
+    color: 'black',
   },
   //Home Destination
   iconContainerHome: {
     backgroundColor: '#5079D2',
     padding: 10,
     borderRadius: 25,
+  },
+  //Reward Bar
+  rewardBar: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 10,
+  },
+  rewardBarPoints: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  rewardBarHub: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  rewardBarText: {
+    fontSize: 16,
   },
 });
 

@@ -5,6 +5,7 @@ import styles from './styles';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Entypo from 'react-native-vector-icons/Entypo';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const HomeSearch = (props) => {
   return (
@@ -35,6 +36,26 @@ const HomeSearch = (props) => {
         <Text style={styles.destinationText}>Home</Text>
       </View>
       {/*End Home Destination*/}
+      {/*RewardBar*/}
+      <View style={styles.rewardBar}>
+        <View style={styles.rewardBarPoints}>
+          <MaterialCommunityIcons
+            name="cards-diamond"
+            size={24}
+            color="#CF9B3F"
+          />
+          <Text style={styles.rewardBarText}>302 pts</Text>
+        </View>
+        <View style={styles.rewardBarHub}>
+          <Text style={styles.rewardBarText}>Reward Hub</Text>
+          <MaterialIcons
+            name="keyboard-arrow-right"
+            size={30}
+            color="#928E93"
+          />
+        </View>
+      </View>
+      {/*End RewardBar*/}
     </View>
   );
 };

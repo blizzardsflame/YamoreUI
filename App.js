@@ -10,13 +10,15 @@ import React from 'react';
 import {StatusBar} from 'react-native';
 // Components
 import HomeScreen from './src/screens/HomeScreen/';
+import HomeSearch from './src/screens/DestinationSearch/';
+//Icons
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <HomeScreen />
+      <HomeSearch />
     </>
   );
 };
