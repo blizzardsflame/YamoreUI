@@ -129,7 +129,7 @@ android {
     }
 
     defaultConfig {
-        manifestPlaceholders = [REACT_NATIVE_PLACES_API_KEY: "$System.env.REACT_NATIVE_PLACES_API_KEY"]
+        manifestPlaceholders = [API_KEY: "$System.env.REACT_NATIVE_PLACES_API_KEY"]
         applicationId "com.yamore"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
