@@ -13,7 +13,7 @@ const HomeScreen = (props) => {
         <HomeMap />
       </View>
       {/*End HomeMap*/}
-      <View style={{height: '50%'}}>
+      <View style={{height: '36%'}}>
         {/*Covid  Message*/}
         <CovidMessage />
         {/*End Covid  Message*/}

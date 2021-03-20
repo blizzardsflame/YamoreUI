@@ -1,24 +1,32 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Pressable} from 'react-native';
 import styles from './styles';
 //Icons Imports
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+//Hooks
+import {useNavigation} from '@react-navigation/native';
 
 const HomeSearch = (props) => {
+  const navigation = useNavigation();
+  //Nav Function
+  const goToSearch = () => {
+    navigation.navigate('DestinationSearch');
+  };
+  //End Nav Function
   return (
     <View style={styles.container}>
       {/*Input Box*/}
-      <View style={styles.inputBoxContainer}>
+      <Pressable onPress={goToSearch} style={styles.inputBoxContainer}>
         <Text style={styles.inputBoxText}>Where to?</Text>
         <View style={styles.timeContainer}>
           <AntDesign name="clockcircle" size={18} />
           <Text>Now</Text>
           <MaterialIcons name="keyboard-arrow-down" size={18} />
         </View>
-      </View>
+      </Pressable>
       {/*End Input Box*/}
       {/*Previous Destination*/}
       <View style={styles.row}>
@@ -37,7 +45,7 @@ const HomeSearch = (props) => {
       </View>
       {/*End Home Destination*/}
       {/*RewardBar*/}
-      <View style={styles.rewardBar}>
+      {/*<View style={styles.rewardBar}>
         <View style={styles.rewardBarPoints}>
           <MaterialCommunityIcons
             name="cards-diamond"
@@ -54,7 +62,7 @@ const HomeSearch = (props) => {
             color="#928E93"
           />
         </View>
-      </View>
+      </View>*/}
       {/*End RewardBar*/}
     </View>
   );

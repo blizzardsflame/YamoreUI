@@ -6,6 +6,8 @@ import styles from './styles';
 import {REACT_NATIVE_PLACES_API_KEY} from '@env';
 //Component
 import PlaceRow from './PlaceRow';
+//Hooks
+import {useNavigation} from '@react-navigation/native';
 
 const homePlace = {
   description: 'Home',
@@ -18,13 +20,14 @@ const workPlace = {
 };
 
 const DestinationSearch = (props) => {
+  const navigation = useNavigation();
   //State
   const [originePlace, setOriginePlace] = useState(null);
   const [destinationPlace, setDestinationPlace] = useState(null);
 
   useEffect(() => {
     if (originePlace && destinationPlace) {
-      console.warn('Redirect to results');
+      navigation.navigate('SearchResults', {originePlace, destinationPlace});
     }
   }, [originePlace, destinationPlace]);
 

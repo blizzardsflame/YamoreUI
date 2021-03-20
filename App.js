@@ -6,6 +6,8 @@
  * @flow strict-local
  */
 
+import 'react-native-gesture-handler';
+
 import React, {useEffect} from 'react';
 import {StatusBar, PermissionsAndroid, Platform} from 'react-native';
 import Geolocation from '@react-native-community/geolocation';
@@ -13,6 +15,7 @@ import Geolocation from '@react-native-community/geolocation';
 import HomeScreen from './src/screens/HomeScreen/';
 import DestinationSearch from './src/screens/DestinationSearch/';
 import SearchResults from './src/screens/SearchResults/';
+import Root from './src/navigation/Root';
 //Icons
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -61,7 +64,7 @@ const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <DestinationSearch />
+      <Root />
     </>
   );
 };
