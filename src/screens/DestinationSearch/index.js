@@ -22,14 +22,14 @@ const workPlace = {
 const DestinationSearch = (props) => {
   const navigation = useNavigation();
   //State
-  const [originePlace, setOriginePlace] = useState(null);
+  const [originPlace, setOriginPlace] = useState(null);
   const [destinationPlace, setDestinationPlace] = useState(null);
 
   useEffect(() => {
-    if (originePlace && destinationPlace) {
-      navigation.navigate('SearchResults', {originePlace, destinationPlace});
+    if (originPlace && destinationPlace) {
+      navigation.navigate('SearchResults', {originPlace, destinationPlace});
     }
-  }, [originePlace, destinationPlace]);
+  }, [originPlace, destinationPlace]);
 
   //Return
   return (
@@ -39,7 +39,7 @@ const DestinationSearch = (props) => {
           placeholder="From"
           onPress={(data, details = null) => {
             // 'details' is provided when fetchDetails = true
-            setOriginePlace({data, details});
+            setOriginPlace({data, details});
           }}
           fetchDetails
           query={{
@@ -71,6 +71,7 @@ const DestinationSearch = (props) => {
             // 'details' is provided when fetchDetails = true
             setDestinationPlace({data, details});
           }}
+          fetchDetails
           query={{
             key: REACT_NATIVE_PLACES_API_KEY,
             language: 'en',
